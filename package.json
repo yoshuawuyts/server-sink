@@ -1,0 +1,30 @@
+{
+  "name": "server-sink",
+  "version": "1.0.0",
+  "description": "HTTP server response target",
+  "main": "index.js",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "test": "standard && npm run deps && NODE_ENV=test node test",
+    "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
+  },
+  "repository": "yoshuawuyts/server-sink",
+  "keywords": [
+    "server",
+    "http",
+    "http-framework"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "http-ndjson": "^3.0.0",
+    "size-stream": "^1.0.1"
+  },
+  "devDependencies": {
+    "bole": "^2.0.0",
+    "dependency-check": "^2.5.1",
+    "get-server-port": "^1.0.0",
+    "istanbul": "^0.4.2",
+    "standard": "^6.0.8",
+    "tape": "^4.5.1"
+  }
+}
